@@ -34,7 +34,6 @@
                 display: none;
                 align-items: center;
                 width: 100%;
-                /**/
 
                 .header__ul-languages {
                     margin-right: 0;
@@ -67,9 +66,7 @@
 
         .header__offerLeft {
             display: none;
-            /**/
             min-height: 35%;
-
             transition: .3s all;
             margin-top: 0;
             width: 100%;

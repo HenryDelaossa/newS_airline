@@ -511,8 +511,7 @@ footer {
       .header .header__navbar .header__ctn-uls {
         display: none;
         align-items: center;
-        width: 100%;
-        /**/ }
+        width: 100%; }
         .header .header__navbar .header__ctn-uls .header__ul-languages {
           margin-right: 0;
           position: absolute;
@@ -542,7 +541,6 @@ footer {
       transform: scale(1); } }
     .header .header__offerLeft {
       display: none;
-      /**/
       min-height: 35%;
       transition: .3s all;
       margin-top: 0;
