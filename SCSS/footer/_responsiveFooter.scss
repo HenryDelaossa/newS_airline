@@ -1,0 +1,60 @@
+@media screen and (max-width: 992px) {
+    footer {
+        padding: 0 2rem;
+        .footer__ctn-information {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "explore services information"
+                "aboutUs aboutUs aboutUs";
+            justify-content: center;
+            div {
+                justify-self: center;
+                max-width: unset;
+            }
+            div:nth-child(1) {
+                grid-area: aboutUs;
+                justify-self: center;
+
+            }
+
+            div:nth-child(2) {
+                grid-area: explore;
+            }
+
+            div:nth-child(3) {
+                grid-area: information;
+            }
+
+            div:nth-child(4) {
+                grid-area: services;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 0 1rem;
+
+        .footer__ctn-information {
+            flex-direction: column;
+
+            div {
+                text-align: center;
+                max-width: unset;
+                margin-top: 1rem;
+
+                ul {
+                    width: fit-content;
+                    margin: 0 auto;
+
+                    li {
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}

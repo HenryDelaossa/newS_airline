@@ -1,0 +1,78 @@
+@media screen and (max-width: 992px) {
+    .main-index__section-offers {
+        grid-template-areas: "ctn-title"
+            "ctn-cardsImage"
+            "ctn-navMenu";
+
+        .section-offers__ctn-cardsImage {
+            grid-area: unset;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            width: 100%;
+
+            .section-offers-article__ctn-cardsImage {
+                grid-area: unset;
+                width: 100%;
+                display: block;
+
+                .ctn-cardsImage__cardImage {
+                    width: 80%;
+                    height: 300px;
+                    margin: 0 auto;
+                    margin-bottom: 2rem;
+
+                    .cardImage__glass {
+                        &:hover {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            .section-offers__chosen-destination {
+                width: 20%;
+
+                p {
+                    width: unset;
+                }
+            }
+        }
+
+        .section-offers__ctn-navMenu {
+            width: 400px;
+
+            .ctn-navMenu__list {
+                li {
+                    align-items: center;
+                    height: 40px;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-index__section-offers {
+
+        .section-offers__ctn-cardsImage {
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+            align-items: center;
+            .section-offers-article__ctn-cardsImage {
+                .ctn-cardsImage__cardImage {
+                    width: 90%;
+                }
+            }
+            .section-offers__chosen-destination {
+                width: 100%;
+            }
+        }
+        .section-offers__ctn-navMenu {
+            width: 80%;
+        }
+
+    }
+}

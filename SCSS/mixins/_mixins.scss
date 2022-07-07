@@ -46,7 +46,7 @@
     }
 }
 
-@mixin buttonsRed {
+@mixin buttonsRed (){
     width: fit-content;
     padding: .8rem 4rem;
     font-size: 1.5rem;

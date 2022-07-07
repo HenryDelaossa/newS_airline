@@ -21,19 +21,22 @@ const cardImage = document.querySelectorAll(".ctn-cardsImage__cardImage").forEac
         father_chosen_destination.appendChild(innerNewChoosDestination);
     });
 });
-// document.querySelectorAll(".ctn-cardsImage__cardImage").forEach((elem, i) => {
-
-//     const cardImage = document.querySelectorAll(".ctn-cardsImage__cardImage")
-//     elem.addEventListener("mouseenter", () => {
-//         cardImage[i].style.outline = "2px solid red"
-//     });
-//     elem.addEventListener("mouseout", () => {
-//         cardImage[i].style.outline = "2px solid #0A2463"
-//     })
-// })
 
 /* añadiendo marcador de pagina a item en menu a la pagina activa */
 window.addEventListener("load", () => {
     const item = document.querySelector(".item-home");
     item.classList.add("pageActive");
+})
+
+/**MENU HAMBURGUESA */
+
+const buttonHambur = document.querySelector('.button-hamburg');
+const header_ctn_items = document.querySelector(".header__ctn-uls");
+const header_offerLeft = document.querySelector(".header__offerLeft");
+const ingredients = document.querySelectorAll(".button-hamburg span")
+
+buttonHambur.addEventListener("click", () => {
+    header_ctn_items.classList.toggle('active');
+    header_offerLeft.classList.toggle("active");
+    ingredients.forEach(ingred => ingred.classList.toggle("animation"))
 })

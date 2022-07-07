@@ -1,0 +1,106 @@
+@media screen and (max-width: 992px) {
+    .header {
+        max-height: 440px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: fit-content;
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: .3s all;
+        animation-duration: .8s;
+        animation-timing-function: linear;
+        max-height: unset;
+
+        .header__navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            height: fit-content;
+
+            .button-hamburg {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .header__ctn-uls {
+                display: none;
+                align-items: center;
+                width: 100%;
+                /**/
+
+                .header__ul-languages {
+                    margin-right: 0;
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 6rem;
+                }
+
+                .header__ul-items {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .header__item {
+                        margin: 2rem 0;
+                        width: 100%;
+                        text-align: center;
+
+                        a {
+                            padding: 0.5rem 0;
+                        }
+                    }
+                }
+
+                &.active {
+                    display: block;
+                    @include animationFadeIn(.5s)
+                }
+            }
+        }
+
+        .header__offerLeft {
+            display: none;
+            /**/
+            min-height: 35%;
+
+            transition: .3s all;
+            margin-top: 0;
+            width: 100%;
+
+            .header__offerLeft-description {
+                width: 100%;
+                margin: 0 auto;
+
+                h3 {
+                    word-wrap: break-word;
+                    font-size: $fontsize3;
+                }
+
+                p {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+
+            .header__offerLeft-buttonBuy {
+                margin: 1rem auto;
+                width: 150px;
+                padding: .5rem 1rem;
+                font-size: $fontSize5;
+            }
+
+            &.active {
+                display: block;
+                transition: .3s all;
+                @include animationFadeIn(.5s)
+            }
+        }
+    }
+}

@@ -15,12 +15,13 @@
         padding-top: 1rem;
 
         .header__ctn-logo {
-            h1 {
+            a {
                 font-size: $fontSize1;
+                color: $toneLight;
                 font-family: $fuentePrincipal;
                 text-transform: uppercase;
-                color: $toneLight;
             }
+
         }
 
         .header__ctn-uls {
@@ -129,6 +130,47 @@
                             opacity: .7;
                         }
                     }
+                }
+            }
+        }
+
+        .button-hamburg {
+            display: none;
+            cursor: pointer;
+            border: none;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+
+            span {
+                display: block;
+                border-radius: 2px;
+                margin: 6px auto;
+                height: 4px;
+                width: 100%;
+                background-color: #ffffff;
+                transition: .3s all;
+            
+            }
+
+            .ingredient-1 {
+                &.animation {
+                    transform: rotate(-45deg) translate(-8px, 6px);
+                }
+            }
+
+            .ingredient-2 {
+                &.animation {
+                    opacity: 0;
+                }
+            }
+
+            .ingredient-3 {
+                &.animation {
+                    transform: rotate(45deg) translate(-7px, -6px);
                 }
             }
         }
