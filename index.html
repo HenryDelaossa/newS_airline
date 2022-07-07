@@ -5,14 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonst google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/styles.css" type="text/css">
     <title>newhsore</title>
 </head>
 
 <body>
     <header class="header">
+        <nav class="header__navbar">
+            <div class="header__ctn-logo">
+                <h1>Airline</h1>
+            </div>
+            <div class="header__ctn-uls">
+                <ul class="header__ul-languages">
+                    <li class="header__list-language">en
+                        <ul class="header__sublist-languages">
+                            <li>RU - Russian</li>
+                            <li>DE - German</li>
+                            <li>FR - French</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="header__ul-items">
+                    <li class="header__item item-home"><a href="#">Home</a></li>
+                    <li class="header__item item-about"><a href="#">About</a></li>
+                    <li class="header__item item-destinations"><a href="#">Destinations</a></li>
+                    <li class="header__item item-contact"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
         <div class="header__offerLeft">
-            <h1 class="header__offerLeft-title">Airline</h1>
             <div class="header__offerLeft-description">
                 <h3>Visit Canada with prices from $800</h3>
                 <p>Prepare your bags and forget your worries to start enjoying your holidays in thi sfantastic country
@@ -20,25 +45,133 @@
             </div>
             <button class="header__offerLeft-buttonBuy">buy now</button>
         </div>
-        <nav class="header__narbav">
-            <ul class="header__narbav-listLanguages">
-                <li>en
-                    <ul>
-                        <li>RU - Russian</li>
-                        <li>DE - German</li>
-                        <li>FR - French</li>
-                    </ul>
+    </header>
+    <main class="main-index">
+        <section class="main-index__section-offers">
+            <div class="section-offers__ctn-title">
+                <h3>offers </h3>
+                <div></div>
+            </div>
+            <div class="section-offers__ctn-cardsImage">
+                <article class="section-offers-article__ctn-cardsImage">
+                    <div class="ctn-cardsImage__cardImage">
+                        <figure class="cardImage__figure">
+                            <a href="#">
+                                <img src="./resources/moscow.jpg" alt="ls-sample4" />
+                            </a>
+                        </figure>
+                        <div class="cardImage__glass">
+                            <p class="cardImage__glass-textDestination tripTo">Trip to Moscow</p>
+                            <i class="cardImage__glass-textDescription">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aliquid accusamus quos ducimus.
+                                <a href="#">more</a></i>
+                            <p class="cardImage__glass-textprice">Price $600.86</p>
+                        </div>
+                    </div>
+
+                    <div class="ctn-cardsImage__cardImage">
+                        <figure class="cardImage__figure">
+                            <a href="#">
+                                <img src="./resources/puerto-rico.jpg" alt="ls-sample4" />
+                            </a>
+                        </figure>
+                        <div class="cardImage__glass">
+                            <p class="cardImage__glass-textDestination tripTo">Trip to Perto Rico</p>
+                            <i class="cardImage__glass-textDescription">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aliquid accusamus quos ducimus.
+                                <a href="#">more</a></i>
+                            <p class="cardImage__glass-textprice">Price $600.86</p>
+                        </div>
+                    </div>
+
+                    <div class="ctn-cardsImage__cardImage">
+                        <figure class="cardImage__figure">
+                            <a href="#">
+                                <img src="./resources/honduras.jpg" alt="ls-sample4" />
+                            </a>
+                        </figure>
+                        <div class="cardImage__glass">
+                            <p class="cardImage__glass-textDestination tripTo">Trip to Honduras</p>
+                            <i class="cardImage__glass-textDescription">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aliquid accusamus quos ducimus.
+                                <a href="#">more</a></i>
+                            <p class="cardImage__glass-textprice">Price $600.86</p>
+                        </div>
+                    </div>
+                </article>
+                <div class="section-offers__chosen-destination">
+                    <p class="choosenDestDown" id="choosenDestDown">Chosen destination</p>
+                </div>
+            </div>
+            <nav class="section-offers__ctn-navMenu">
+                <h4 class="ctn-navMenu__title">Menu</h4>
+                <ul class="ctn-navMenu__list">
+                    <li>
+                        <a href="#">Check-in</a>
+                    </li>
+                    <li><a href="#">Manage My Booking</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Members</a></li>
+                </ul>
+            </nav>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__ctn-iconSocial">
+            <h4 class="ctn-iconSocial__title">Follow us</h4>
+            <ul class="ctn-iconSocial__list">
+                <li>
+                    <a href="https://www.facebook.com">
+                        <img src="./resources/facebook.svg" alt="facebook airline">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com">
+                        <img src="./resources/instagram.svg" alt="instagram airline">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/?lang=es">
+                        <img src="./resources/twitter.svg" alt="twitter airline">
+                    </a>
                 </li>
             </ul>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        </div>
+        <div class="footer__ctn-information">
+            <div>
+                <h4>About us</h4>
+                <p>We wanr to help passengers to reach their destinations</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">More search</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>services</h4>
+                <ul>
+                    <li><a href="#">Manage My Bookings</a></li>
+                    <li><a href="#">checkin</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Cars</a></li>
+                </ul>
+            </div>
+        </div>
 
-    </header>
+    </footer>
 
 
 
@@ -48,7 +181,7 @@
 
 
 
-
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

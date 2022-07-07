@@ -1,0 +1,169 @@
+.header {
+    background-image: url(../../resources/plane.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 77vh;
+    max-height: 580px;
+    padding: 0 5rem;
+
+    .header__navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: transparent;
+        height: 70px;
+        padding-top: 1rem;
+
+        .header__ctn-logo {
+            h1 {
+                font-size: $fontSize1;
+                font-family: $fuentePrincipal;
+                text-transform: uppercase;
+                color: $toneLight;
+            }
+        }
+
+        .header__ctn-uls {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .header__ul-languages {
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 1rem;
+                margin-bottom: .5rem;
+                position: relative;
+
+                .header__list-language {
+                    position: relative;
+                    font-size: $fontSize5;
+                    color: $toneLight;
+                    font-family: $fuentePrincipal;
+                    font-weight: 400;
+                    cursor: pointer;
+                    transition: .3s all;
+                    @include arrowDown;
+
+                    .header__sublist-languages {
+                        display: none;
+                        position: absolute;
+                        top: 28px;
+                        right: -35px;
+                        border-radius: 12px;
+                        width: 150px;
+                        z-index: 1;
+                        background-color: $toneLight;
+                        padding: .5rem .5rem .4rem .5rem;
+                        text-align: center;
+                        transition: .3s all linear;
+                        animation-name: uptodown;
+                        animation-timing-function: linear;
+                        animation-duration: .3s;
+                        @include upAnddownEffectSubItems;
+
+                        li {
+                            color: $toneBlue;
+                            font-family: $fuentePrincipal;
+                            font-weight: 500;
+                            margin: 0 0 .4rem 0;
+                        }
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: -12px;
+                            right: 10px;
+                            padding: 0 1rem;
+                            background-color: $toneLight;
+                            width: 0;
+                            height: 20px;
+                            clip-path: polygon(50% 10%, 5% 100%, 95% 100%)
+                        }
+                    }
+
+                    &:hover>.header__sublist-languages {
+                        display: block;
+                        transition: all;
+                    }
+
+
+                }
+
+                &:hover>.header__list-language::before {
+                    transform: rotate(180deg);
+                    transition-duration: .5s;
+                }
+
+
+            }
+
+            .header__ul-items {
+                display: flex;
+                justify-content: flex-end;
+
+                .header__item {
+                    margin-left: 1.2rem;
+                    font-size: $fontSize5;
+                    color: $toneLight;
+                    font-family: $fuentePrincipal;
+                    font-weight: 400;
+                    position: relative;
+                    @include effectUnderline($toneLight, 3px);
+
+                    a {
+                        color: $toneLight;
+                        font-family: $fuentePrincipal;
+                    }
+
+                    &.pageActive {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 100%;
+                            height: 3px;
+                            background: $toneLight;
+                            transition: .3s all;
+                            opacity: .7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header__offerLeft {
+        display: inline-block;
+        margin-top: 8rem;
+
+        .header__offerLeft-description {
+            text-align: left;
+
+            h3 {
+                font-family: $fuentePrincipal;
+                color: $toneLight;
+                font-size: $fontSize2;
+                font-weight: 400;
+                word-spacing: 3px;
+                padding-bottom: .8rem;
+            }
+
+            p {
+                font-family: $fuentePrincipal;
+                color: $toneLight;
+                font-weight: 400;
+                font-size: $fontSize5;
+                width: 60%;
+                word-wrap: break-word;
+
+            }
+        }
+
+        .header__offerLeft-buttonBuy {
+            margin-top: 3rem;
+            @include buttonsRed;
+        }
+    }
+}

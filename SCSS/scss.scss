@@ -1,0 +1,24 @@
+@import "./variables/variables";
+@import "./mixins/mixins";
+
+@import "./body/body";
+@import "./header/header";
+@import "./main/main";
+@import "./main/sectionOffers/sectionOffers";
+@import "./footer/footer";
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,85 @@
+// si se aplica este mixin @effectUnderline sobre un hover y ya el mismo elemento tiene otro pseudoelemento before, se aplica un efecto chevere que cambia la forma del before previo este donde este y lo envia hacia abajo con un efecto de cambio y transicion , para un ejemplo: este mismo mixin esta aplicado a los listItems del navbar y al menuNav en la seccion offers 
+@mixin effectUnderline ($colorEffect, $height) {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: $height;
+        background: $colorEffect;
+        transition: .3s all;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+}
+
+
+@mixin arrowDown {
+    &::before {
+        content: url(../../resources/arrow-down.svg);
+        filter: invert(100%) sepia(13%) saturate(7500%) hue-rotate(189deg) brightness(113%) contrast(113%);
+        position: absolute;
+        top: 20%;
+        left: 100%;
+        width: 18px;
+        height: 20px;
+        color: $toneLight;
+        z-index: 1;
+        transition: .3s all;
+    }
+}
+
+@mixin upAnddownEffectSubItems {
+    @keyframes uptodown {
+        0% {
+            opacity: 0;
+            transform: scaleY(0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(100%);
+        }
+    }
+}
+
+@mixin buttonsRed {
+    width: fit-content;
+    padding: .8rem 4rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: $fuentePrincipal;
+    color: $toneLight;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    background: $toneRed;
+    transition: .3s all;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+@mixin animationFadeIn($duration) {
+    animation: fadeFromRight;
+    animation-timing-function: linear;
+    animation-duration: $duration;
+    transition: .3s all;
+
+    @keyframes fadeFromRight {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}

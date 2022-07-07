@@ -1,0 +1,243 @@
+.main-index__section-offers {
+    width: 100%;
+    height: fit-content;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-areas: "ctn-title ctn-title"
+        "ctn-cardsImage ctn-navMenu";
+    justify-content: stretch;
+
+    .section-offers__ctn-title {
+        grid-area: ctn-title;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+
+        h3 {
+            font-family: $fuentePrincipal;
+            color: $toneBlue;
+            font-size: $fontsize3;
+            font-weight: 400;
+        }
+
+        div {
+            width: 90%;
+            height: .85px;
+            background-color: $toneGray;
+            transform: rotate(-.5deg);
+
+        }
+    }
+
+    .section-offers__ctn-cardsImage {
+        .section-offers-article__ctn-cardsImage {
+            grid-area: ctn-cardsImage;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+
+            .ctn-cardsImage__cardImage {
+                width: 220px;
+                height: 190px;
+                outline: 2px solid $tonePurple;
+                border-radius: 12px;
+                padding: 0;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transition: .5s all;
+                position: relative;
+                cursor: pointer;
+                filter: $dropShadowCards;
+
+                .cardImage__figure {
+                    position: relative;
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                    margin: 0;
+                    border-radius: 12px;
+
+                    img {
+
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        -webkit-transition: all 4s ease-out;
+                        transition: all .4s ease-out;
+                    }
+
+                    &:hover img {
+                        opacity: .9;
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                    }
+                }
+
+                .cardImage__glass {
+                    position: absolute;
+                    box-sizing: border-box;
+                    top: unset;
+                    bottom: -1px;
+                    left: 0;
+                    background-color: $toneBlackTrans;
+                    width: 100%;
+                    height: 40%;
+                    margin: 0;
+                    border-radius: 0 0 12px 12px;
+                    padding: .5rem 1rem;
+                    transition: .3s all;
+
+                    &:hover {
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 101%;
+                        border-radius: 12px;
+                        outline: 2px solid $toneRed;
+                    }
+
+                    &:hover>.cardImage__glass-textDescription {
+                        opacity: 1;
+                        display: block;
+                    }
+
+                    p {
+                        color: $toneLight;
+                        font-size: $fontSize6;
+                        font-weight: 200;
+                        font-family: $fuentePrincipal;
+                    }
+
+                    .cardImage__glass-textDestination {
+                        margin-bottom: 1rem;
+                    }
+
+                    .cardImage__glass-textDescription {
+                        transition: .3s all;
+                        color: $toneLight;
+                        font-family: $fuentePrincipal;
+                        font-size: $fontSize7;
+                        font-weight: 200;
+                        opacity: 0;
+                        display: none;
+                        a {
+                            color: $toneLight;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .cardImage__glass-textprice {
+                        text-align: right;
+                        font-weight: 600;
+                        font-size: $fontSize4;
+                    }
+                }
+            }
+        }
+
+        .section-offers__chosen-destination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+            min-height: 100px;
+
+            p {
+                font-family: $fuentePrincipal;
+                font-size: $fontSize6;
+                font-weight: 600;
+                color: $toneGray;
+                width: 260px;
+                border-top: 1px solid $toneGray;
+                text-align: center;
+                padding-top: .5rem;
+
+            }
+
+            .innerChoosDestination {
+                border-top: none;
+                font-size: $fontSize6;
+                font-weight: 300;
+                @include animationFadeIn(.2s);
+            }
+
+        }
+    }
+
+    .section-offers__ctn-navMenu {
+        grid-area: ctn-navMenu;
+        justify-self: end;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $toneLight;
+        width: 60%;
+        min-width: 200px;
+        margin: 0 auto;
+        border-radius: 18px;
+        filter: $dropShadowCards;
+
+        .ctn-navMenu__title {
+            height: 20%;
+            line-height: 65px;
+            color: $toneGray;
+            font-weight: 300;
+            font-size: $fontSize5;
+            font-family: $fuentePrincipal;
+            align-self: center;
+        }
+
+        .ctn-navMenu__list {
+            padding: 0;
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                padding-left: .5rem;
+                height: 20%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                border-bottom: .2px solid $toneGray;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 15px;
+                    height: 25px;
+                    top: 10px;
+                    left: 20px;
+                    background-color: $toneBlue;
+                    clip-path: polygon(100% 50%, 0 30%, 0 70%)
+                }
+
+                a {
+                    color: $toneGray;
+                    font-family: $fuentePrincipal;
+                    font-size: $fontSize6;
+                    font-weight: 300;
+                    padding-left: 2rem;
+                }
+
+                &:hover {
+                    @include effectUnderline($toneBlue, 4px)
+                }
+            }
+
+            li:nth-child(5) {
+                border-bottom: none;
+            }
+        }
+    }
+}
