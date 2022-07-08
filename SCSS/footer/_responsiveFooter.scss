@@ -1,6 +1,7 @@
 @media screen and (max-width: 992px) {
     footer {
         padding: 0 2rem;
+
         .footer__ctn-information {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -8,10 +9,13 @@
             grid-template-areas: "explore services information"
                 "aboutUs aboutUs aboutUs";
             justify-content: center;
+            margin-bottom: 1rem;
+
             div {
                 justify-self: center;
                 max-width: unset;
             }
+
             div:nth-child(1) {
                 grid-area: aboutUs;
                 justify-self: center;
@@ -39,7 +43,12 @@
         padding: 0 1rem;
 
         .footer__ctn-information {
-            flex-direction: column;
+
+            grid-template-columns: 1fr;
+            grid-template-areas: "aboutUs"
+                "services"
+                "information"
+                "explore";
 
             div {
                 text-align: center;

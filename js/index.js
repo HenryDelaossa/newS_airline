@@ -23,6 +23,9 @@ const cardImage = document.querySelectorAll(".ctn-cardsImage__cardImage").forEac
 });
 
 /* añadiendo marcador de pagina a item en menu a la pagina activa */
+/**para este caso que es solo una pagina es factible, pero a medida que hay mas paginas no sirve esta misma porcion de codigo.
+ * usar un script insertado internamente en los html con el className del item
+ */
 window.addEventListener("load", () => {
     const item = document.querySelector(".item-home");
     item.classList.add("pageActive");
@@ -32,11 +35,11 @@ window.addEventListener("load", () => {
 
 const buttonHambur = document.querySelector('.button-hamburg');
 const header_ctn_items = document.querySelector(".header__ctn-uls");
-const header_offerLeft = document.querySelector(".header__offerLeft");
+// const header_offerLeft = document.querySelector(".header__offerLeft");
 const ingredients = document.querySelectorAll(".button-hamburg span")
 
 buttonHambur.addEventListener("click", () => {
     header_ctn_items.classList.toggle('active');
-    header_offerLeft.classList.toggle("active");
+    // header_offerLeft.classList.toggle("active");
     ingredients.forEach(ingred => ingred.classList.toggle("animation"))
 })

@@ -17,6 +17,7 @@
         animation-duration: .8s;
         animation-timing-function: linear;
         max-height: unset;
+        padding: 0 1.5rem;
 
         .header__navbar {
             flex-direction: column;
@@ -65,10 +66,9 @@
         }
 
         .header__offerLeft {
-            display: none;
             min-height: 35%;
             transition: .3s all;
-            margin-top: 0;
+            margin-top: 2rem;
             width: 100%;
 
             .header__offerLeft-description {
@@ -93,11 +93,11 @@
                 font-size: $fontSize5;
             }
 
-            &.active {
-                display: block;
-                transition: .3s all;
-                @include animationFadeIn(.5s)
-            }
+            // &.active {
+            //     display: block;
+            //     transition: .3s all;
+            //     @include animationFadeIn(.5s)
+            // }
         }
     }
 }
